@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EC74C032BB160BB00AE932E /* Welcom_page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C022BB160BB00AE932E /* Welcom_page.swift */; };
+		0EC74C062BB172EB00AE932E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C052BB172EB00AE932E /* RoundButton.swift */; };
+		0EC74C0A2BB1888800AE932E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C092BB1888800AE932E /* UserModel.swift */; };
+		0EC74C0D2BB18E4B00AE932E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C0C2BB18E4B00AE932E /* SignInView.swift */; };
+		0EC74C0F2BB1915D00AE932E /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C0E2BB1915D00AE932E /* RegisterViewModel.swift */; };
+		0EC74C112BB19A3200AE932E /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C102BB19A3200AE932E /* LineTextField.swift */; };
+		0EC74C132BB1A34900AE932E /* UiExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C122BB1A34900AE932E /* UiExtention.swift */; };
+		0EC74C162BB1A84700AE932E /* Home_page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C152BB1A84700AE932E /* Home_page.swift */; };
 		5176CEFA2BA5A16300CCB8AC /* Online_Clothes_ShopingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5176CEF92BA5A16300CCB8AC /* Online_Clothes_ShopingApp.swift */; };
 		5176CEFC2BA5A16300CCB8AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5176CEFB2BA5A16300CCB8AC /* ContentView.swift */; };
 		5176CEFE2BA5A16400CCB8AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5176CEFD2BA5A16400CCB8AC /* Assets.xcassets */; };
@@ -14,6 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EC74C022BB160BB00AE932E /* Welcom_page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcom_page.swift; sourceTree = "<group>"; };
+		0EC74C052BB172EB00AE932E /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		0EC74C092BB1888800AE932E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		0EC74C0C2BB18E4B00AE932E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		0EC74C0E2BB1915D00AE932E /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		0EC74C102BB19A3200AE932E /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
+		0EC74C122BB1A34900AE932E /* UiExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiExtention.swift; sourceTree = "<group>"; };
+		0EC74C152BB1A84700AE932E /* Home_page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_page.swift; sourceTree = "<group>"; };
 		5176CEF62BA5A16300CCB8AC /* Online Clothes Shoping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Online Clothes Shoping.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5176CEF92BA5A16300CCB8AC /* Online_Clothes_ShopingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Online_Clothes_ShopingApp.swift; sourceTree = "<group>"; };
 		5176CEFB2BA5A16300CCB8AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +48,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EC74BFE2BB1600300AE932E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0EC74C092BB1888800AE932E /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0EC74BFF2BB1601700AE932E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0EC74C0E2BB1915D00AE932E /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0EC74C002BB1602C00AE932E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0EC74C142BB1A82F00AE932E /* Home_page */,
+				0EC74C012BB1609100AE932E /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0EC74C012BB1609100AE932E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0EC74C022BB160BB00AE932E /* Welcom_page.swift */,
+				0EC74C0C2BB18E4B00AE932E /* SignInView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0EC74C042BB1722600AE932E /* UICompont */ = {
+			isa = PBXGroup;
+			children = (
+				0EC74C052BB172EB00AE932E /* RoundButton.swift */,
+				0EC74C102BB19A3200AE932E /* LineTextField.swift */,
+				0EC74C122BB1A34900AE932E /* UiExtention.swift */,
+			);
+			path = UICompont;
+			sourceTree = "<group>";
+		};
+		0EC74C142BB1A82F00AE932E /* Home_page */ = {
+			isa = PBXGroup;
+			children = (
+				0EC74C152BB1A84700AE932E /* Home_page.swift */,
+			);
+			path = Home_page;
+			sourceTree = "<group>";
+		};
 		5176CEED2BA5A16300CCB8AC = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +119,12 @@
 		5176CEF82BA5A16300CCB8AC /* Online Clothes Shoping */ = {
 			isa = PBXGroup;
 			children = (
-				5176CEF92BA5A16300CCB8AC /* Online_Clothes_ShopingApp.swift */,
+				0EC74C042BB1722600AE932E /* UICompont */,
+				0EC74C002BB1602C00AE932E /* View */,
+				0EC74BFF2BB1601700AE932E /* ViewModel */,
+				0EC74BFE2BB1600300AE932E /* Model */,
 				5176CEFB2BA5A16300CCB8AC /* ContentView.swift */,
+				5176CEF92BA5A16300CCB8AC /* Online_Clothes_ShopingApp.swift */,
 				5176CEFD2BA5A16400CCB8AC /* Assets.xcassets */,
 				5176CEFF2BA5A16400CCB8AC /* Preview Content */,
 			);
@@ -137,8 +209,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EC74C062BB172EB00AE932E /* RoundButton.swift in Sources */,
 				5176CEFC2BA5A16300CCB8AC /* ContentView.swift in Sources */,
+				0EC74C0F2BB1915D00AE932E /* RegisterViewModel.swift in Sources */,
+				0EC74C132BB1A34900AE932E /* UiExtention.swift in Sources */,
+				0EC74C032BB160BB00AE932E /* Welcom_page.swift in Sources */,
+				0EC74C162BB1A84700AE932E /* Home_page.swift in Sources */,
 				5176CEFA2BA5A16300CCB8AC /* Online_Clothes_ShopingApp.swift in Sources */,
+				0EC74C0D2BB18E4B00AE932E /* SignInView.swift in Sources */,
+				0EC74C0A2BB1888800AE932E /* UserModel.swift in Sources */,
+				0EC74C112BB19A3200AE932E /* LineTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

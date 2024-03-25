@@ -9,10 +9,56 @@ import SwiftUI
 
 struct Welcom_page: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Image("welcome")
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+
+            VStack{
+                Spacer()
+                
+                Image("app_logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 60, height: 60)
+                    .padding(.bottom, 8)
+                
+                Text( "Welcome\nto our store")
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                
+                Text( "Ger your groceries in as fast as one hour")
+                    .foregroundColor(.white.opacity(0.7))
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom, 30)
+                
+                
+                NavigationLink {
+                    SignInView()
+                } label: {
+                    RoundButton(title: "Get Started") {
+                    }
+                }
+                Spacer()
+                    .frame(height: 80)
+                }
+                
+            }
+            .navigationTitle("")
+            .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
+            .ignoresSafeArea()
     }
+    
 }
 
-#Preview {
-    Welcom_page()
+struct WelcomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        NavigationView {
+            Welcom_page()
+        }
+        
+    }
 }

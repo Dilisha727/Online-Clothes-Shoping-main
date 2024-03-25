@@ -11,7 +11,15 @@ import SwiftUI
 struct Online_Clothes_ShopingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            NavigationView {
+                Welcom_page()
+            }
+                
+                
+            }
+            
         }
     }
-}
+
+

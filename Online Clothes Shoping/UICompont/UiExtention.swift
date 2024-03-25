@@ -7,12 +7,21 @@
 
 import SwiftUI
 
-struct UiExtention: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct ShowButton: ViewModifier {
+    @Binding var isShow: Bool
+    
+    public func body(content: Content) -> some View {
+        
+        HStack {
+            content
+            Button {
+                isShow.toggle()
+            } label: {
+                Image(systemName: !isShow ? "eye.fill" : "eye.slash.fill" )
+                    .foregroundColor(.blue)
+            }
+
+        }
     }
 }
 
-#Preview {
-    UiExtention()
-}
