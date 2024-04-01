@@ -5,28 +5,40 @@
 //  Created by NIBM on 2024-03-25.
 //
 
+
 import SwiftUI
 
 struct RoundButton: View {
-    @State var title: String = "Tittle"
-    var didTap: (()->())?
+    var title:String
+    @Binding var selected:String
+    var animation: Namespace.ID
+    
+    
     var body: some View {
-        Button {
-            didTap?()
-        } label: {
+        Button(action: {
+            withAnimation(.spring()){selected = title}
+            print(title)
+        }){
             Text(title)
-                .foregroundColor(.white)
-                .multilineTextAlignment(.center)
+                .font(.system(size: 15))
+                .fontWeight(.medium)
+                .foregroundColor(selected == title ? .white : .black)
+                .padding(.vertical,10)
+                .padding(.horizontal,selected == title ? 20 : 0)
+                .background(//slide
+                    ZStack{
+                        if selected == title{
+                            Color.black
+                                .clipShape(Capsule())
+                                .matchedGeometryEffect(id: "Tab", in: animation)
+                        }
+                    }
+                )
+                
         }
-        .frame( minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60 )
-        .background( Color.red)
-        .cornerRadius(20)
     }
 }
 
-struct RoundButton_Previews: PreviewProvider {
-    static var previews: some View {
-        RoundButton()
-            .padding(20)
-    }
-}
+
+
+
