@@ -7,14 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		054A2A7F2BB65F81003B262A /* navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A2A7E2BB65F81003B262A /* navigation.swift */; };
+		054A2A812BB6601D003B262A /* BottomNavBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A2A802BB6601D003B262A /* BottomNavBarViewModel.swift */; };
+		054A2A832BB66983003B262A /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A2A822BB66983003B262A /* Chat.swift */; };
+		055636352BB90AB300D2E656 /* Lora,Nunito in Resources */ = {isa = PBXBuildFile; fileRef = 055636342BB90AB200D2E656 /* Lora,Nunito */; };
+		055636372BB956D300D2E656 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055636362BB956D300D2E656 /* ProductViewModel.swift */; };
+		0574DF392BB5C70F005B0A67 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0574DF382BB5C70F005B0A67 /* LoginViewModel.swift */; };
+		0574DF3B2BB5C79F005B0A67 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0574DF3A2BB5C79F005B0A67 /* LoginView.swift */; };
+		057F15E42BB6CCB40078A60E /* Profile_page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057F15E32BB6CCB40078A60E /* Profile_page.swift */; };
+		057F15E62BB6CD8B0078A60E /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057F15E52BB6CD8B0078A60E /* Search.swift */; };
+		05EDD7A32BB8592B00D6E64C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 05EDD7A22BB8592B00D6E64C /* SDWebImageSwiftUI */; };
 		0EC74C032BB160BB00AE932E /* Welcom_page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C022BB160BB00AE932E /* Welcom_page.swift */; };
 		0EC74C062BB172EB00AE932E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C052BB172EB00AE932E /* RoundButton.swift */; };
-		0EC74C0A2BB1888800AE932E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C092BB1888800AE932E /* UserModel.swift */; };
-		0EC74C0D2BB18E4B00AE932E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C0C2BB18E4B00AE932E /* SignInView.swift */; };
+		0EC74C0A2BB1888800AE932E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C092BB1888800AE932E /* User.swift */; };
+		0EC74C0D2BB18E4B00AE932E /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C0C2BB18E4B00AE932E /* SignUp.swift */; };
 		0EC74C0F2BB1915D00AE932E /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C0E2BB1915D00AE932E /* RegisterViewModel.swift */; };
 		0EC74C112BB19A3200AE932E /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C102BB19A3200AE932E /* LineTextField.swift */; };
 		0EC74C132BB1A34900AE932E /* UiExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C122BB1A34900AE932E /* UiExtention.swift */; };
 		0EC74C162BB1A84700AE932E /* Home_page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC74C152BB1A84700AE932E /* Home_page.swift */; };
+		50F0B0812BB273D7002A12DD /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F0B0802BB273D7002A12DD /* CartManager.swift */; };
+		50F0B0832BB27472002A12DD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F0B0822BB27472002A12DD /* Product.swift */; };
+		50F0B0852BB28C24002A12DD /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F0B0842BB28C24002A12DD /* ProductCard.swift */; };
+		50F0B0872BB28CBF002A12DD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F0B0862BB28CBF002A12DD /* CardView.swift */; };
+		50F0B0892BB28D91002A12DD /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F0B0882BB28D91002A12DD /* ProductRow.swift */; };
+		50F0B08B2BB28E18002A12DD /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F0B08A2BB28E18002A12DD /* CartButton.swift */; };
+		50F0B08D2BB2A735002A12DD /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F0B08C2BB2A735002A12DD /* ProductDetailView.swift */; };
 		5176CEFA2BA5A16300CCB8AC /* Online_Clothes_ShopingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5176CEF92BA5A16300CCB8AC /* Online_Clothes_ShopingApp.swift */; };
 		5176CEFC2BA5A16300CCB8AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5176CEFB2BA5A16300CCB8AC /* ContentView.swift */; };
 		5176CEFE2BA5A16400CCB8AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5176CEFD2BA5A16400CCB8AC /* Assets.xcassets */; };
@@ -22,14 +39,31 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		054A2A7E2BB65F81003B262A /* navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigation.swift; sourceTree = "<group>"; };
+		054A2A802BB6601D003B262A /* BottomNavBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavBarViewModel.swift; sourceTree = "<group>"; };
+		054A2A822BB66983003B262A /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		055636342BB90AB200D2E656 /* Lora,Nunito */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Lora,Nunito"; sourceTree = "<group>"; };
+		055636362BB956D300D2E656 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		0574DF382BB5C70F005B0A67 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		0574DF3A2BB5C79F005B0A67 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0574DF412BB5D17F005B0A67 /* Online-Clothes-Shoping-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Online-Clothes-Shoping-Info.plist"; sourceTree = SOURCE_ROOT; };
+		057F15E32BB6CCB40078A60E /* Profile_page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile_page.swift; sourceTree = "<group>"; };
+		057F15E52BB6CD8B0078A60E /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		0EC74C022BB160BB00AE932E /* Welcom_page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcom_page.swift; sourceTree = "<group>"; };
 		0EC74C052BB172EB00AE932E /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
-		0EC74C092BB1888800AE932E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		0EC74C0C2BB18E4B00AE932E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		0EC74C092BB1888800AE932E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0EC74C0C2BB18E4B00AE932E /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		0EC74C0E2BB1915D00AE932E /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		0EC74C102BB19A3200AE932E /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
 		0EC74C122BB1A34900AE932E /* UiExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiExtention.swift; sourceTree = "<group>"; };
 		0EC74C152BB1A84700AE932E /* Home_page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_page.swift; sourceTree = "<group>"; };
+		50F0B0802BB273D7002A12DD /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		50F0B0822BB27472002A12DD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		50F0B0842BB28C24002A12DD /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
+		50F0B0862BB28CBF002A12DD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		50F0B0882BB28D91002A12DD /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
+		50F0B08A2BB28E18002A12DD /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
+		50F0B08C2BB2A735002A12DD /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		5176CEF62BA5A16300CCB8AC /* Online Clothes Shoping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Online Clothes Shoping.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5176CEF92BA5A16300CCB8AC /* Online_Clothes_ShopingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Online_Clothes_ShopingApp.swift; sourceTree = "<group>"; };
 		5176CEFB2BA5A16300CCB8AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,16 +76,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05EDD7A32BB8592B00D6E64C /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0574DF3C2BB5D00A005B0A67 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				055636342BB90AB200D2E656 /* Lora,Nunito */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		0EC74BFE2BB1600300AE932E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0EC74C092BB1888800AE932E /* UserModel.swift */,
+				0EC74C092BB1888800AE932E /* User.swift */,
+				50F0B0822BB27472002A12DD /* Product.swift */,
+				054A2A7E2BB65F81003B262A /* navigation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -60,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				0EC74C0E2BB1915D00AE932E /* RegisterViewModel.swift */,
+				0574DF382BB5C70F005B0A67 /* LoginViewModel.swift */,
+				055636362BB956D300D2E656 /* ProductViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -77,7 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				0EC74C022BB160BB00AE932E /* Welcom_page.swift */,
-				0EC74C0C2BB18E4B00AE932E /* SignInView.swift */,
+				0EC74C0C2BB18E4B00AE932E /* SignUp.swift */,
+				0574DF3A2BB5C79F005B0A67 /* LoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -88,6 +136,12 @@
 				0EC74C052BB172EB00AE932E /* RoundButton.swift */,
 				0EC74C102BB19A3200AE932E /* LineTextField.swift */,
 				0EC74C122BB1A34900AE932E /* UiExtention.swift */,
+				50F0B0802BB273D7002A12DD /* CartManager.swift */,
+				50F0B0842BB28C24002A12DD /* ProductCard.swift */,
+				50F0B0882BB28D91002A12DD /* ProductRow.swift */,
+				50F0B08A2BB28E18002A12DD /* CartButton.swift */,
+				057F15E52BB6CD8B0078A60E /* Search.swift */,
+				054A2A802BB6601D003B262A /* BottomNavBarViewModel.swift */,
 			);
 			path = UICompont;
 			sourceTree = "<group>";
@@ -96,6 +150,10 @@
 			isa = PBXGroup;
 			children = (
 				0EC74C152BB1A84700AE932E /* Home_page.swift */,
+				50F0B0862BB28CBF002A12DD /* CardView.swift */,
+				50F0B08C2BB2A735002A12DD /* ProductDetailView.swift */,
+				054A2A822BB66983003B262A /* Chat.swift */,
+				057F15E32BB6CCB40078A60E /* Profile_page.swift */,
 			);
 			path = Home_page;
 			sourceTree = "<group>";
@@ -119,6 +177,8 @@
 		5176CEF82BA5A16300CCB8AC /* Online Clothes Shoping */ = {
 			isa = PBXGroup;
 			children = (
+				0574DF412BB5D17F005B0A67 /* Online-Clothes-Shoping-Info.plist */,
+				0574DF3C2BB5D00A005B0A67 /* fonts */,
 				0EC74C042BB1722600AE932E /* UICompont */,
 				0EC74C002BB1602C00AE932E /* View */,
 				0EC74BFF2BB1601700AE932E /* ViewModel */,
@@ -155,6 +215,9 @@
 			dependencies = (
 			);
 			name = "Online Clothes Shoping";
+			packageProductDependencies = (
+				05EDD7A22BB8592B00D6E64C /* SDWebImageSwiftUI */,
+			);
 			productName = "Online Clothes Shoping";
 			productReference = 5176CEF62BA5A16300CCB8AC /* Online Clothes Shoping.app */;
 			productType = "com.apple.product-type.application";
@@ -183,6 +246,9 @@
 				Base,
 			);
 			mainGroup = 5176CEED2BA5A16300CCB8AC;
+			packageReferences = (
+				05EDD7A12BB8592B00D6E64C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 5176CEF72BA5A16300CCB8AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -198,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5176CF012BA5A16400CCB8AC /* Preview Assets.xcassets in Resources */,
+				055636352BB90AB300D2E656 /* Lora,Nunito in Resources */,
 				5176CEFE2BA5A16400CCB8AC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,16 +276,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50F0B0872BB28CBF002A12DD /* CardView.swift in Sources */,
+				50F0B08B2BB28E18002A12DD /* CartButton.swift in Sources */,
 				0EC74C062BB172EB00AE932E /* RoundButton.swift in Sources */,
+				50F0B08D2BB2A735002A12DD /* ProductDetailView.swift in Sources */,
+				50F0B0892BB28D91002A12DD /* ProductRow.swift in Sources */,
 				5176CEFC2BA5A16300CCB8AC /* ContentView.swift in Sources */,
 				0EC74C0F2BB1915D00AE932E /* RegisterViewModel.swift in Sources */,
+				50F0B0812BB273D7002A12DD /* CartManager.swift in Sources */,
+				0574DF392BB5C70F005B0A67 /* LoginViewModel.swift in Sources */,
+				50F0B0852BB28C24002A12DD /* ProductCard.swift in Sources */,
 				0EC74C132BB1A34900AE932E /* UiExtention.swift in Sources */,
+				50F0B0832BB27472002A12DD /* Product.swift in Sources */,
+				054A2A832BB66983003B262A /* Chat.swift in Sources */,
+				054A2A7F2BB65F81003B262A /* navigation.swift in Sources */,
 				0EC74C032BB160BB00AE932E /* Welcom_page.swift in Sources */,
 				0EC74C162BB1A84700AE932E /* Home_page.swift in Sources */,
 				5176CEFA2BA5A16300CCB8AC /* Online_Clothes_ShopingApp.swift in Sources */,
-				0EC74C0D2BB18E4B00AE932E /* SignInView.swift in Sources */,
-				0EC74C0A2BB1888800AE932E /* UserModel.swift in Sources */,
+				055636372BB956D300D2E656 /* ProductViewModel.swift in Sources */,
+				057F15E42BB6CCB40078A60E /* Profile_page.swift in Sources */,
+				057F15E62BB6CD8B0078A60E /* Search.swift in Sources */,
+				0EC74C0D2BB18E4B00AE932E /* SignUp.swift in Sources */,
+				0574DF3B2BB5C79F005B0A67 /* LoginView.swift in Sources */,
+				0EC74C0A2BB1888800AE932E /* User.swift in Sources */,
 				0EC74C112BB19A3200AE932E /* LineTextField.swift in Sources */,
+				054A2A812BB6601D003B262A /* BottomNavBarViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.3;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -334,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.3;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -352,9 +434,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Online Clothes Shoping/Preview Content\"";
-				DEVELOPMENT_TEAM = R53G3HVJMA;
+				DEVELOPMENT_TEAM = DGUL67BR76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Online-Clothes-Shoping-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -381,9 +467,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Online Clothes Shoping/Preview Content\"";
-				DEVELOPMENT_TEAM = R53G3HVJMA;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Online-Clothes-Shoping-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,6 +514,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		05EDD7A12BB8592B00D6E64C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		05EDD7A22BB8592B00D6E64C /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05EDD7A12BB8592B00D6E64C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5176CEEE2BA5A16300CCB8AC /* Project object */;
 }
