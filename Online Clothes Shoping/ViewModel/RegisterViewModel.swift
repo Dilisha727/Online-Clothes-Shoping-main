@@ -1,77 +1,39 @@
-//
-//  RegisterViewModel.swift
-//  Online Clothes Shoping
-//
-//  Created by NIBM on 2024-03-25.
-//
-
 import Foundation
-import Combine
 
-class RegistrationViewModel: ObservableObject {
-    @Published var phoneNumber: String = ""
-    @Published var email: String = ""
-    @Published var password: String = ""
-    @Published var registrationStatus: RegistrationStatus = .idle
+struct UserRegistration: Codable {
+    var email: String
+    var password: String
+    var fullName: String
+    var phoneNumber: String
+    var address: String
+    var confirmPassword: String
+}
 
-    private var cancellables: Set<AnyCancellable> = []
-
-    enum RegistrationStatus {
-        case idle
-        case loading
-        case success
-        case failure(String)
-    }
-
-    func registerUser() {
-        guard !phoneNumber.isEmpty, !email.isEmpty, !password.isEmpty else {
-            registrationStatus = .failure("Please fill in all fields.")
+class UserRegistrationService {
+    func registerUser(userRegistration: UserRegistration, completion: @escaping (Bool, String) -> Void) {
+        guard let url = URL(string: "http://localhost:8000/users/register") else {
+            completion(false, "Invalid URL")
             return
         }
 
-        // Make API request to register user
-        registrationStatus = .loading
-        // Call your Node.js API to register the user
-        // Example using URLSession or Alamofire
-        // Replace "https://your-api-url/register" with your actual API endpoint
-
-        let url = URL(string: "https://your-api-url/register")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
-        let userData: [String: Any] = [
-            "phoneNumber": phoneNumber,
-            "email": email,
-            "password": password
-        ]
+        do {
+            request.httpBody = try JSONEncoder().encode(userRegistration)
+        } catch {
+            completion(false, "Error encoding user registration data")
+            return
+        }
 
-        request.httpBody = try? JSONSerialization.data(withJSONObject: userData)
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 201 else {
+                completion(false, "Failed to register user")
+                return
+            }
 
-        URLSession.shared.dataTaskPublisher(for: request)
-            .map(\.data)
-            .decode(type: RegistrationResponse.self, decoder: JSONDecoder())
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case .finished:
-                    break
-                case .failure(let error):
-                    self.registrationStatus = .failure(error.localizedDescription)
-                }
-            }, receiveValue: { response in
-                // Handle registration response
-                if response.success {
-                    self.registrationStatus = .success
-                } else {
-                    self.registrationStatus = .failure(response.message)
-                }
-            })
-            .store(in: &cancellables)
+            completion(true, "User registered successfully")
+        }.resume()
     }
-}
-
-struct RegistrationResponse: Codable {
-    let success: Bool
-    let message: String
 }
