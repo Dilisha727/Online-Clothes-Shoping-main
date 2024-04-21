@@ -34,10 +34,9 @@ struct UserRegistrationView: View {
                     .background(.opacity(0.9))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 
-                
                 SecureField("Password", text: $password)
                     .font(.custom("Lora-Medium", size: 16))
-                    .foregroundColor(.black)
+                    .foregroundColor(.blue)
                     .frame(width: 335)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 
@@ -64,6 +63,7 @@ struct UserRegistrationView: View {
                     .foregroundColor(.black)
                     .frame(width: 335)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                
                 
                 Button(action: {
                     // Perform registration action
