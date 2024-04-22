@@ -51,7 +51,7 @@ struct Welcom_page: View {
                 
                 Button(action: {
                 }) {
-                    NavigationLink(destination: Home_page()){
+                    NavigationLink(destination: UserLoginView()){
                         Text("Get Started")
                             .foregroundColor(.black)
                             .font(Font.custom("Nunito", size: 18))
