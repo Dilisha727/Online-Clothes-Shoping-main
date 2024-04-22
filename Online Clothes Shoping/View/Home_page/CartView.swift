@@ -454,6 +454,8 @@ struct CartItemView: View {
 }
 
 */
+
+//final
 import SwiftUI
 import SDWebImageSwiftUI
 
@@ -465,11 +467,15 @@ struct Cart: View {
 
     var body: some View {
         VStack {
+            Spacer()
             Text("Cart")
                 .font(.system(size: 44))
                 .fontWeight(.bold)
-                .frame(width: 360, alignment: .leading)
+                //.frame(width: 360, alignment: .leading)
+                //.frame(maxWidth: .infinity, alignment: .leading) 
                 .padding(.top)
+            Spacer()
+                
         }
 
         NavigationView {
@@ -481,7 +487,7 @@ struct Cart: View {
                 
             }
         }
-        .frame(width: 360, height: 400) // Modify frame width and height here
+        .frame(width: 360, height: 330) // Modify frame width and height here
 
         Divider()
 
@@ -515,20 +521,26 @@ struct Cart: View {
             Button(action: {
                 isCheckoutActive = true // Activate navigation
             }) {
-                Text("Check Out")
-                    .foregroundColor(.white)
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .padding()
-                    .background(Color.red)
-                    .cornerRadius(10)
+                Text("Checkout")
+                    .foregroundColor(.black)
+                    .font(Font.custom("Nunito", size: 18))
+                    .fontWeight(.medium)
+                    .frame(width: 335, height: 50)
+                    .background(Color(hex: "78F208")) // Button color: 78F208
+                    .cornerRadius(25)
+                    .padding([.top, .leading, .bottom], 20)
+                    //.padding(.vertical, 50) // Increased vertical padding to move the button further up
+                           
             }
-            .padding(.bottom, 20)
+            .padding(.bottom, 50)
             .sheet(isPresented: $isCheckoutActive) {
-                Checkout() // Navigate to Checkout page
+                CheckoutView() // Navigate to Checkout page
+                  // .padding(.vertical, 70) // Increased vertical padding to move the button further up
+                           
             }
         }
-        .padding(.horizontal, 12)
+        .padding(.bottom, 50)
+        .frame(width: 360, height: 400)
         .onAppear(perform: calculateTotalPrice)
     }
 

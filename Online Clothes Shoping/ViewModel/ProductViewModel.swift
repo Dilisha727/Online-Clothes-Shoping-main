@@ -15,7 +15,7 @@ class ProductViewModel : ObservableObject {
     
     @Published var productResults : [Items] = []
     
-    let baseUrl = "http://localhost:8000/products";
+    let baseUrl = "https://ios-backend-gykn.onrender.com/products";
     
     init() {
         loadProducts()

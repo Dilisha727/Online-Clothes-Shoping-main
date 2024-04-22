@@ -16,10 +16,14 @@ struct UserRegistrationView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 20) {
-                Text("Welcome Back")
-                    .font(.custom("Lora-Medium", size: 32))
+                Text("Welcome To\nGlamFrame")
+                    .font(Font.custom("Chalkduster", size: 30))
+                    .fontWeight(.bold)
                     .foregroundColor(.white)
-                    .frame(width: 335, height: 36)
+                   // .frame(width: 335, height: 36)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(3)
+                    
                 
                 Text("Please log in to continue shopping")
                     .font(.custom("Nunito-Medium", size: 16))
@@ -67,6 +71,15 @@ struct UserRegistrationView: View {
                 
                 Button(action: {
                     // Perform registration action
+                    let userRegistration = UserRegistration(email: email, password: password, fullName: fullName, phoneNumber: phoneNumber, address: address, confirmPassword: confirmPassword)
+                    
+                    UserRegistrationService().registerUser(userRegistration: userRegistration) { success, message in
+                        if success {
+                            print("Registration successful")
+                        } else {
+                            print("Registration failed: \(message)")
+                        }
+                    }
                 }) {
                     Text("Register")
                         .font(.custom("Lora-Medium", size: 16))
@@ -95,11 +108,17 @@ struct UserRegistrationView: View {
                 
                 Button(action: {
                     // Navigate to login screen
+                    // You can add code here to navigate to the login screen
                 }) {
-                    Text("Sign In")
-                        .font(.custom("Nunito-Medium", size: 16))
-                        .foregroundColor(Color(hex: "78F208"))
+                    NavigationLink(destination: UserLoginView()) {
+                        Text("Sign In")
+                            .font(.custom("Nunito-Medium", size: 16))
+                            .foregroundColor(Color(hex: "78F208"))
+                    }
+                    .buttonStyle(PlainButtonStyle()) // Add this line to style the navigation link as a button
                 }
+
+
                 .frame(width: 335, height: 16)
                 .padding(.top, 4)
             }
@@ -113,3 +132,13 @@ struct UserRegistrationView_Previews: PreviewProvider {
         UserRegistrationView()
     }
 }
+ /*
+ 
+ TextField("Email", text: $email)
+     .font(.custom("Lora-Medium", size: 16))
+     .frame(width: 335, height: 40)
+     .background(Color.clear) // Set background color to clear (transparent)
+     .foregroundColor(.white) // Set text color to white
+     .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.white, lineWidth: 1)) // Add white border
+     
+*/
