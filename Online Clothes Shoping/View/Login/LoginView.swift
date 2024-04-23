@@ -122,6 +122,7 @@ struct UserLoginView: View {
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
             
+            
             VStack(spacing: 24) {
                 Spacer()
                 
@@ -130,35 +131,42 @@ struct UserLoginView: View {
                     .fontWeight(.medium)
                     .foregroundColor(.white)
                     .frame(width: 335, height: 36)
-                
-                Text("Please log in to continue Shopping")
-                    .font(Font.custom("Georgia", size: 16))
-                    .foregroundColor(.white)
-                    .frame(width: 335, height: 22)
-               
-                
-                TextField("Enter your email", text: $email)
-                    .font(Font.custom("Lora", size: 16))
-                    .foregroundColor(.black)
-                    .multilineTextAlignment(.center) // Align center horizontally
-                    .frame(width: 370, height: 22)
-                    .background(Color.gray.opacity(0.9))
-              
-                SecureField("Enter your password", text: $password)
-                    .font(Font.custom("Lora", size: 16))
-                    .foregroundColor(.black)
-                    .padding(.top, 8.0)
-                    .multilineTextAlignment(.center) // Align center horizontally
-                    .frame(width: 370, height: 22)
-                    .background(Color.black)
-                
-                HStack {
-                    Spacer()
-                    Text("Forget password")
-                        .font(Font.custom("Nunito", size: 16))
-                        .foregroundColor(Color(hex: "78F208"))
-                }
-                .frame(width: 335, height: 16)
+                    .padding(.bottom,70)
+                VStack{
+                    
+                    Text("Please log in to continue Shopping")
+                        .font(Font.custom("Georgia", size: 16))
+                        .foregroundColor(.white)
+                        .frame(width: 335, height: 22)
+                        .padding(.bottom,40)
+                    
+                    
+                    TextField("Enter your email", text: $email)
+                        .font(Font.custom("Lora", size: 16))
+                        .foregroundColor(.black)
+                        .multilineTextAlignment(.center) // Align center horizontally
+                        .frame(width: 320, height: 22)
+                        .background(Color.gray.opacity(0.9))
+                        .padding(.bottom,20)
+                    
+                    SecureField("Enter your password", text: $password)
+                        .font(Font.custom("Lora", size: 16))
+                        .foregroundColor(.black)
+                        .padding(.top, 8.0)
+                        .multilineTextAlignment(.center) // Align center horizontally
+                        .frame(width: 320, height: 22)
+                        .background(Color.black)
+                        .padding(.bottom,20)
+                    
+                    HStack {
+                        Spacer()
+                        Text("Forget password")
+                            //.font(Font.custom("Nunito", size: 16))
+                            //.foregroundColor(Color(hex: "78F208"))
+                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                            .padding(.bottom,10)
+                    }
+                    .frame(width: 335, height: 16)
                 
                 Button(action: {
                     // Perform login action
@@ -181,12 +189,16 @@ struct UserLoginView: View {
                         .fontWeight(.medium)
                         .foregroundColor(.black)
                         .frame(width: 335, height: 50)
-                        .background(Color(hex: "78F208"))
+                        //.background(Color(hex: "78F208"))
                         .cornerRadius(25)
+                        .background(Color.blue)
                 }
                 .fullScreenCover(isPresented: $navigateToHome) {
                     Home_page()
+                
                 }
+                .padding(.bottom,30)
+                .cornerRadius(25)
                 
                 HStack {
                     Spacer()
@@ -195,17 +207,34 @@ struct UserLoginView: View {
                         .foregroundColor(.white)
                     NavigationLink(destination: UserRegistrationView()) {
                         Text("SignUp")
-                            .font(Font.custom("Nunito", size: 16))
+                            .font(Font.custom("Nunito", size: 18))
                             .fontWeight(.medium)
-                            .foregroundColor(Color(hex: "78F208"))
+                           // .foregroundColor(Color(hex: "78F208"))
+                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                     }
                 }
-                
-                Spacer()
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            .border(Color.black, width: 1)
+            }.padding()
+                    .frame(width: 350, height: 400)
+                    .background(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .fill(
+                                            LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.2), Color.white.opacity(0.1)]), startPoint: .top, endPoint: .bottom)
+                                        )
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 12)
+                                                .stroke(Color.black, lineWidth: 1)
+                                        )
+                                        .cornerRadius(12)
+                                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
+                                )
+                          
+                    Spacer()
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .border(Color.black, width: 1)
+                .padding(.top,20)
+            
         }
         .onAppear {
             // Display saved email and password when the view appears

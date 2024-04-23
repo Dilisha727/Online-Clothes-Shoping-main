@@ -57,7 +57,8 @@ struct Welcom_page: View {
                             .font(Font.custom("Nunito", size: 18))
                             .fontWeight(.medium)
                             .frame(width: 335, height: 50)
-                            .background(Color(hex: "78F208")) // Button color: 78F208
+                            //.background(Color(hex: "78F208")) // Button color: 78F208
+                            .background(Color.blue)
                             .cornerRadius(25)
                             .padding([.top, .leading, .bottom], 20)
                             .opacity(isAnimated ? 1 : 0) // Fade in animation

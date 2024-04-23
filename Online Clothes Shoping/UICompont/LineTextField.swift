@@ -4,7 +4,9 @@
 //
 //  Created by NIBM on 2024-03-25.
 //
-/*
+
+import SwiftUI
+
 struct LineTextField: View {
     @State var title: String = "Title"
     @State var placholder: String = "Placholder"
@@ -13,16 +15,12 @@ struct LineTextField: View {
     
     var body: some View {
         ZStack{
-            Image("Register")
-                .resizable()
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
-            
+           
             
             
             VStack {
                 Text(title)
-                    .foregroundColor(.white)
+                    .foregroundColor(.blue)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 
                 
@@ -46,43 +44,5 @@ struct LineTextField_Previews: PreviewProvider {
             .padding(20)
     }
 }
-*/
-import SwiftUI
 
-struct UserRegistrationView1: View {
-    @State private var email = ""
-    @State private var password = ""
-    @State private var confirmPassword = ""
-    @State private var fullName = ""
-    @State private var phoneNumber = ""
-    @State private var address = ""
 
-    var body: some View {
-        Form {
-            TextField("Email", text: $email)
-            SecureField("Password", text: $password)
-            SecureField("Confirm Password", text: $confirmPassword)
-            TextField("Full Name", text: $fullName)
-            TextField("Phone Number", text: $phoneNumber)
-            TextField("Address", text: $address)
-            
-            Button("Register") {
-                let userRegistration = UserRegistration(email: email, password: password, fullName: fullName, phoneNumber: phoneNumber, address: address, confirmPassword: confirmPassword)
-                
-                UserRegistrationService().registerUser(userRegistration: userRegistration) { success, message in
-                    if success {
-                        print("Registration successful")
-                    } else {
-                        print("Registration failed: \(message)")
-                    }
-                }
-            }
-        }
-    }
-}
-
-struct UserRegistrationView1_Previews: PreviewProvider {
-    static var previews: some View {
-        UserRegistrationView()
-    }
-}

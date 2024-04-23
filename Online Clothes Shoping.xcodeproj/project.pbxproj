@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05457B782BD7BEC300AB1EBB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05457B772BD7BEC300AB1EBB /* Message.swift */; };
 		054A2A7F2BB65F81003B262A /* navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A2A7E2BB65F81003B262A /* navigation.swift */; };
 		054A2A812BB6601D003B262A /* BottomNavBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A2A802BB6601D003B262A /* BottomNavBarViewModel.swift */; };
 		054A2A832BB66983003B262A /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A2A822BB66983003B262A /* Chat.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05457B772BD7BEC300AB1EBB /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		054A2A7E2BB65F81003B262A /* navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigation.swift; sourceTree = "<group>"; };
 		054A2A802BB6601D003B262A /* BottomNavBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavBarViewModel.swift; sourceTree = "<group>"; };
 		054A2A822BB66983003B262A /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				50F0B0822BB27472002A12DD /* Product.swift */,
 				054A2A7E2BB65F81003B262A /* navigation.swift */,
 				057A43CD2BD4C9E500A547C2 /* Cart.swift */,
+				05457B772BD7BEC300AB1EBB /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				0EC74C0D2BB18E4B00AE932E /* SignUp.swift in Sources */,
 				0574DF3B2BB5C79F005B0A67 /* LoginView.swift in Sources */,
 				0EC74C0A2BB1888800AE932E /* User.swift in Sources */,
+				05457B782BD7BEC300AB1EBB /* Message.swift in Sources */,
 				0EC74C112BB19A3200AE932E /* LineTextField.swift in Sources */,
 				054A2A812BB6601D003B262A /* BottomNavBarViewModel.swift in Sources */,
 			);

@@ -17,78 +17,102 @@ struct UserRegistrationView: View {
             
             VStack(spacing: 20) {
                 Text("Welcome To\nGlamFrame")
-                    .font(Font.custom("Chalkduster", size: 30))
+                    .font(Font.custom("Chalkduster", size: 40))
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                    // .frame(width: 335, height: 36)
                     .multilineTextAlignment(.center)
                     .lineLimit(3)
+                
+                VStack{
                     
-                
-                Text("Please log in to continue shopping")
-                    .font(.custom("Nunito-Medium", size: 16))
-                    .foregroundColor(.white)
-                    .frame(width: 335, height: 22)
-                    .padding(.top, 48)
-                
-                TextField("Email", text: $email)
-                    .font(.custom("Lora-Medium", size: 16))
-                    .foregroundColor(.black)
-                    .frame(width: 335)
-                    .background(.opacity(0.9))
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                SecureField("Password", text: $password)
-                    .font(.custom("Lora-Medium", size: 16))
-                    .foregroundColor(.blue)
-                    .frame(width: 335)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                SecureField("Confirm Password", text: $confirmPassword)
-                    .font(.custom("Lora-Medium", size: 16))
-                    .foregroundColor(.black)
-                    .frame(width: 335)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                TextField("Full Name", text: $fullName)
-                    .font(.custom("Lora-Medium", size: 16))
-                    .foregroundColor(.black)
-                    .frame(width: 335)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                TextField("Phone Number", text: $phoneNumber)
-                    .font(.custom("Lora-Medium", size: 16))
-                    .foregroundColor(.black)
-                    .frame(width: 335)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                TextField("Address", text: $address)
-                    .font(.custom("Lora-Medium", size: 16))
-                    .foregroundColor(.black)
-                    .frame(width: 335)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                
-                Button(action: {
-                    // Perform registration action
-                    let userRegistration = UserRegistration(email: email, password: password, fullName: fullName, phoneNumber: phoneNumber, address: address, confirmPassword: confirmPassword)
-                    
-                    UserRegistrationService().registerUser(userRegistration: userRegistration) { success, message in
-                        if success {
-                            print("Registration successful")
-                        } else {
-                            print("Registration failed: \(message)")
-                        }
-                    }
-                }) {
-                    Text("Register")
+                    Text("Please log in to continue shopping")
+                        .font(.custom("Nunito-Medium", size: 20))
+                        .foregroundColor(.white)
+                        .frame(width: 335, height: 22)
+                        .padding(.top, 48)
+                        .padding()
+                    TextField("Email", text: $email)
                         .font(.custom("Lora-Medium", size: 16))
                         .foregroundColor(.black)
-                        .frame(width: 335, height: 50)
-                        .background(Color(hex: "78F208"))
-                        .cornerRadius(8)
+                        .frame(width: 320)
+                        .background(.opacity(0.9))
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .cornerRadius(10)
+                        .padding(.top, 48)
+                    
+                    SecureField("Password", text: $password)
+                        .font(.custom("Lora-Medium", size: 16))
+                        .foregroundColor(.blue)
+                        .frame(width: 320)
+                        .cornerRadius(10)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                    SecureField("Confirm Password", text: $confirmPassword)
+                        .font(.custom("Lora-Medium", size: 16))
+                        .foregroundColor(.black)
+                        .frame(width: 320)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding(.bottom, 48)
+                        .cornerRadius(10)
+                    
+                    /* TextField("Full Name", text: $fullName)
+                     .font(.custom("Lora-Medium", size: 16))
+                     .foregroundColor(.black)
+                     .frame(width: 335)
+                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                     
+                     TextField("Phone Number", text: $phoneNumber)
+                     .font(.custom("Lora-Medium", size: 16))
+                     .foregroundColor(.black)
+                     .frame(width: 335)
+                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                     
+                     TextField("Address", text: $address)
+                     .font(.custom("Lora-Medium", size: 16))
+                     .foregroundColor(.black)
+                     .frame(width: 335)
+                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                     
+                     */
+                    Button(action: {
+                        // Perform registration action
+                        let userRegistration = UserRegistration(email: email, password: password, fullName: fullName, phoneNumber: phoneNumber, address: address, confirmPassword: confirmPassword)
+                        
+                        UserRegistrationService().registerUser(userRegistration: userRegistration) { success, message in
+                            if success {
+                                print("Registration successful")
+                            } else {
+                                print("Registration failed: \(message)")
+                            }
+                        }
+                    }) {
+                        Text("Register")
+                            .font(.custom("Lora-Medium", size: 19))
+                            .foregroundColor(.black)
+                            .fontWeight(.bold)
+                            .frame(width: 300, height: 50)
+                            .background(Color.blue)
+                            .cornerRadius(8)
+                            //.background(Color(hex: "78F208"))
+                    }.cornerRadius(12)
+                        .padding(.bottom,47)
                 }
-                
+                .padding()
+                .frame(width: 350, height: 400)
+                .background(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .fill(
+                                        LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.2), Color.white.opacity(0.1)]), startPoint: .top, endPoint: .bottom)
+                                    )
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 12)
+                                            .stroke(Color.black, lineWidth: 1)
+                                    )
+                                    .cornerRadius(12)
+                                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
+                            )
+                      
                 HStack(spacing: 20) {
                     Image("facebook_icon")
                                 .resizable()
@@ -104,7 +128,8 @@ struct UserRegistrationView: View {
                 
                 Text("Already have an account?")
                     .font(.custom("Nunito-Medium", size: 16))
-                    .foregroundColor(.white)
+                    .foregroundColor(.blue)
+                    //.foregroundColor(Color(hex: "78F208"))
                 
                 Button(action: {
                     // Navigate to login screen
@@ -112,8 +137,9 @@ struct UserRegistrationView: View {
                 }) {
                     NavigationLink(destination: UserLoginView()) {
                         Text("Sign In")
+                            .foregroundColor(.blue)
+                        // .foregroundColor(Color(hex: "78F208"))
                             .font(.custom("Nunito-Medium", size: 16))
-                            .foregroundColor(Color(hex: "78F208"))
                     }
                     .buttonStyle(PlainButtonStyle()) // Add this line to style the navigation link as a button
                 }

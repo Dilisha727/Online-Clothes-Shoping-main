@@ -574,15 +574,11 @@ struct Searchhome: View {
 
 */
 //chat with customer
+//final
 
 import SwiftUI
 
-struct Message: Identifiable {
-    let id = UUID()
-    let sender: String
-    let content: String
-    let timestamp: Date
-}
+
 
 struct Home_page: View {
     @State var goTOCart = false
@@ -795,7 +791,12 @@ struct Searchhome: View {
                 }
             }
             .padding(.horizontal)
+            NavigationLink(destination: SearchView(), isActive: $isSearchActive) {
+                                EmptyView()
+                            }
+                            .hidden()
         }
     }
 }
+
 
