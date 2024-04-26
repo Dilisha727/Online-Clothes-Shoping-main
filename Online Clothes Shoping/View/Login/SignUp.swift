@@ -1,3 +1,9 @@
+//
+//  WelcomePage.swift
+//  Online Clothes Shopping
+//
+//  Created by NIBM on 2024-03-25.
+
 import SwiftUI
 
 struct UserRegistrationView: View {
@@ -9,6 +15,7 @@ struct UserRegistrationView: View {
     @State private var address = ""
 
     var body: some View {
+       
         ZStack{
             Image("Register")
                 .resizable()

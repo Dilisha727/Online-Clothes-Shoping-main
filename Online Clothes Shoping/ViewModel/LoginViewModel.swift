@@ -1,3 +1,11 @@
+//
+//  ProductViewModel.swift
+//  Online Clothes Shoping
+//
+//  Created by Dilisha priyashan on 2024-03-30.
+//
+
+
 import Foundation
 
 struct UserLogin: Codable {
@@ -7,7 +15,7 @@ struct UserLogin: Codable {
 
 class UserLoginService {
     func loginUser(userLogin: UserLogin, completion: @escaping (Bool, String) -> Void) {
-        guard let url = URL(string: "http://localhost:8000/users/login") else {
+        guard let url = URL(string: "https://ios-backend-gykn.onrender.com/users/login") else {
             completion(false, "Invalid URL")
             return
         }

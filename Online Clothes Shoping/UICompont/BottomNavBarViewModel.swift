@@ -1,4 +1,4 @@
-import SwiftUI
+/*import SwiftUI
 
 class NavigationViewModel: ObservableObject {
     @Published var selectedIndex = 0
@@ -55,3 +55,4 @@ struct BottomNavBarViewModel_Previews: PreviewProvider {
              .previewLayout(.sizeThatFits)
      }
 }
+*/

@@ -1,3 +1,10 @@
+//
+//  Shipping Address.swift
+//  Online Clothes Shoping
+//
+//  Created by Dilisha priyashan on 2024-04-10.
+//
+
 import SwiftUI
 import Combine
 
@@ -37,7 +44,7 @@ struct CheckoutView: View {
                 
                 RoundedRectangle(cornerRadius: 8)
                     .frame(height: 48)
-                    .foregroundColor(.green.opacity(0.2))
+                    .foregroundColor(.blue.opacity(0.2))
                     .overlay(
                         HStack {
                             Text("Add Shipping Address")
@@ -82,7 +89,7 @@ struct CheckoutView: View {
                         .font(Font.custom("Nunito", size: 18))
                         .fontWeight(.medium)
                         .frame(width: 335, height: 50)
-                        .background(Color(hex: "78F208")) // Button color: 78F208
+                        .background(Color.blue) // Button color: 78F208
                         .cornerRadius(25)
                         .padding([.top, .leading, .bottom], 20)
                 }
@@ -93,15 +100,13 @@ struct CheckoutView: View {
                 }
             }
             .padding(.horizontal)
-            .navigationBarTitle("", displayMode: .inline) // Hide navigation bar title
-            .navigationBarHidden(false) // Show navigation bar
+            .navigationBarTitle("", displayMode: .inline) 
+            .navigationBarHidden(false)
         }
     }
 }
 
-// Dummy view for Shipping Address editing
 
-//
 
 struct PaymentSelectionView: View {
     let text: String

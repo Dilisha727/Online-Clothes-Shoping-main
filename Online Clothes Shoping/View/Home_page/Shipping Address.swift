@@ -2,7 +2,7 @@
 //  Shipping Address.swift
 //  Online Clothes Shoping
 //
-//  Created by Dilisha priyashan on 2024-04-22.
+//  Created by Dilisha priyashan on 2024-04-01.
 //
 
 import SwiftUI
@@ -38,7 +38,7 @@ struct ShippingAddressView: View {
            
             
             TextField("Address", text: $address)
-                .overlay(Rectangle().frame(width: 150, height: 1).foregroundColor(.black).offset(x: 0, y: 14))
+                .overlay(Rectangle().frame(width: 150, height: 1).foregroundColor(.black).offset(x: 0, y: 140))
                 .frame(width: 340, height: 30)
                 .padding()
                 .background(Color.gray.opacity(0.2))
@@ -70,13 +70,14 @@ struct ShippingAddressView: View {
             Spacer()
             Button(action: {
                 // Add action for payment
+                
             }) {
                 Text("Add address")
                     .foregroundColor(.black)
                     .font(Font.custom("Nunito", size: 18))
                     .fontWeight(.medium)
                     .frame(width: 335, height: 50)
-                    .background(Color(hex: "78F208")) // Button color: 78F208
+                    .background(Color.blue) // Button color: 78F208
                     .cornerRadius(25)
                     .padding([.top, .leading, .bottom], 20)
             }
